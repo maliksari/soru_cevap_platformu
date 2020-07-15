@@ -1,30 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
---
--- Anamakine: 127.0.0.1
--- Üretim Zamanı: 24 Oca 2020, 10:29:00
--- Sunucu sürümü: 10.1.38-MariaDB
--- PHP Sürümü: 7.3.2
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
---
--- Veritabanı: `chatbot`
---
-
--- --------------------------------------------------------
-
---
 -- Tablo için tablo yapısı `admin`
 --
 
@@ -36,14 +12,6 @@ CREATE TABLE `admin` (
   `password` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
---
--- Tablo döküm verisi `admin`
---
-
-INSERT INTO `admin` (`id`, `name`, `email`, `username`, `password`) VALUES
-(1, 'malik sari', 'malik@gmail.com', 'malik_admin', '$.kxfkadsfdnbfjdndklasdcmsvnbdfjkaslaşsdlvNXhkoC9'),
-(2, 'malik sari', 'malik2@gmail.com', 'malik_sari1', '$5$rounds=53500dkvdsflsafövmdmlkn.MZehK9BR/dQsIoRch8'),
-(3, 'malik sari', 'deneme@gmail.com', 'deneme', '$5$rounds=53500dkfjbhfkdsalŞKSAJDSFF76IODpAEHKRKgwpThm6');
 
 -- --------------------------------------------------------
 
@@ -56,14 +24,6 @@ CREATE TABLE `cevapsiz_sorular` (
   `cevapsiz_soru` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
---
--- Tablo döküm verisi `cevapsiz_sorular`
---
-
-INSERT INTO `cevapsiz_sorular` (`id`, `cevapsiz_soru`) VALUES
-(55, 'deneme'),
-(57, 'deneme'),
-(58, 'eldssldşmvs');
 
 -- --------------------------------------------------------
 
@@ -77,22 +37,7 @@ CREATE TABLE `soru_cevap` (
   `cevap` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
---
--- Tablo döküm verisi `soru_cevap`
---
 
-INSERT INTO `soru_cevap` (`id`, `soru`, `cevap`) VALUES
-(1, 'Naive Bayes algoritmasının avantajı nedir ?', 'Naive Bayes algorimasının avantajı küçük bir veri kümesiyle de eğitilebilmesi ve rakiplerine göre daha hızlı çalışmasıdır. Dezavantajı ise değişkenler arasındaki ilişkinin gösterilememesidir.'),
-(2, 'Genetik programlama nedir?', 'Genetik algoritmalarının alt kolu olarak düşünülebilecek bir alan olan genetik programlamada belirlenen hedef fonksiyonunun sonuca ulaşması için yazılımın nasıl çalışması gerektiği bulunmaya çalışılır.'),
-(3, 'Makine öğrenmesinde model seçimi nedir?', 'Makine öğrenmesinde doğru model seçimine ihtiyaç duyarız. Aynı veri setinde farklı sonuçlar doğurabilen bu model seçimi istatistik,veri madenciliği gibi alanlara da uygulanabilmektedir.'),
-(4, 'Veri madenciliği nedir?', 'Veri madenciliği, büyük ölçekli veriler arasından faydalı bilgiye ulaşma, bilgiyi madenleme işidir. Büyük veri yığınları içerisinden gelecekle ilgili tahminde bulunabilmemizi sağlayabilecek bağıntıların bilgisayar programı kullanarak aranması olarak da tanımlanabilir.'),
-(7, 'deneme güncelleme', 'güncellendi'),
-(9, 'merhaba', 'merhaba'),
-(10, 'deneme', 'deneme cevap'),
-(11, 'deneme soru', 'deneme cevap'),
-(13, 'merhaba', 'deneme merhaba'),
-(18, 'yeni soru', 'yeni cevap'),
-(19, 'deneme soru ekle ', 'eklendi');
 
 -- --------------------------------------------------------
 
@@ -108,20 +53,8 @@ CREATE TABLE `users` (
   `password` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
---
--- Tablo döküm verisi `users`
---
 
-INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`) VALUES
-(1, 'malik sari', 'malik@gmail.com', 'malik_sari', '$5$rounds=55435654SAD4F65S3D4F5A3F4SNTFcV.q2apDC3m2'),
-(2, 'malik sari1', 'malik6@gmail.com', 'malik_sari1', '$5684545DELgRVCesq49.'),
-(3, 'malik sari1', 'malik2@gmail.com', 'malik_sari1', '$5$rounds=53554685SADF465F4A6F54AcBkMDiW1qu3g.4iO30'),
-(4, 'malik sari1', 'malik4834@gmail.com', 'malik_sari1', '$5$roFDSGGJDKSLAEKSFJSDGDGKX.aoJMZeLAMSZT2y7'),
-(5, 'deneme deneme', 'deneme@gmail.com', 'deneme', '$5$rounds=DFDKBJFGKDLKAFSDGJDJLKFD645354SF6SGLBCO2KyphCxKlXaXKoYd5');
 
---
--- Dökümü yapılmış tablolar için indeksler
---
 
 --
 -- Tablo için indeksler `admin`
@@ -176,6 +109,3 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
