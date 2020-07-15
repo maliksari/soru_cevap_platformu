@@ -41,9 +41,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `username`, `password`) VALUES
-(1, 'malik sari', 'malik.sari06@gmail.com', 'malik_admin', '$5$rounds=535000$YWmhgBt90qvOuxuY$9Petqcqu0q1VgqqgwLhpdK.0ZhEsWPgXBgeKNXhkoC9'),
-(2, 'malik sari', 'malik.sari06@gmail.com', 'malik_sari1', '$5$rounds=535000$l6byHLMoxi4XiEgZ$t/yq7LqfttnIQptJzG2D.lkn.MZehK9BR/dQsIoRch8'),
-(3, 'malik sari', 'deneme@gmail.com', 'deneme', '$5$rounds=535000$aoiTy7lynjTBK19w$WedSlsHlYQSLFhv3uJ5yec/L76IODpAEHKRKgwpThm6');
+(1, 'malik sari', 'malik@gmail.com', 'malik_admin', '$.kxfkadsfdnbfjdndklasdcmsvnbdfjkaslaşsdlvNXhkoC9'),
+(2, 'malik sari', 'malik2@gmail.com', 'malik_sari1', '$5$rounds=53500dkvdsflsafövmdmlkn.MZehK9BR/dQsIoRch8'),
+(3, 'malik sari', 'deneme@gmail.com', 'deneme', '$5$rounds=53500dkfjbhfkdsalŞKSAJDSFF76IODpAEHKRKgwpThm6');
 
 -- --------------------------------------------------------
 
@@ -113,11 +113,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`) VALUES
-(1, 'malik sari', 'malik.sari06@gmail.com', 'malik_sari', '$5$rounds=535000$.Rbxvd4XRBJd4O1W$/VfW0U8GgFF8ij7oJgH.z.Cz0p8bNTFcV.q2apDC3m2'),
-(2, 'malik sari1', 'malik.sari@gmail.com', 'malik_sari1', '$5$rounds=535000$X/vI0HK9fDyjJDyR$2S3QBly4JUTUbRmnbZ6RQmjIPSfhPiDELgRVCesq49.'),
-(3, 'malik sari1', 'malik.sari@gmail.com', 'malik_sari1', '$5$rounds=535000$TkwMrneUnRYEZgGu$82d8vgsbxlCwkfTAxTfPJlmmlcBkMDiW1qu3g.4iO30'),
-(4, 'malik sari1', 'malik.sari@gmail.com', 'malik_sari1', '$5$rounds=535000$oDkb4E2yZVQGtjmc$pe0MaR13XYmisqSXOnUAyDuPlaX.aoJMZeLAMSZT2y7'),
-(5, 'deneme deneme', 'deneme@gmail.com', 'deneme', '$5$rounds=535000$Q5Lebik8rDYT8QH5$KZKJOxjz3N/S4tZ6YCFPG6LBCO2KyphCxKlXaXKoYd5');
+(1, 'malik sari', 'malik@gmail.com', 'malik_sari', '$5$rounds=55435654SAD4F65S3D4F5A3F4SNTFcV.q2apDC3m2'),
+(2, 'malik sari1', 'malik6@gmail.com', 'malik_sari1', '$5684545DELgRVCesq49.'),
+(3, 'malik sari1', 'malik2@gmail.com', 'malik_sari1', '$5$rounds=53554685SADF465F4A6F54AcBkMDiW1qu3g.4iO30'),
+(4, 'malik sari1', 'malik4834@gmail.com', 'malik_sari1', '$5$roFDSGGJDKSLAEKSFJSDGDGKX.aoJMZeLAMSZT2y7'),
+(5, 'deneme deneme', 'deneme@gmail.com', 'deneme', '$5$rounds=DFDKBJFGKDLKAFSDGJDJLKFD645354SF6SGLBCO2KyphCxKlXaXKoYd5');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
