@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+  
+    <title>Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap4.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tasarim.css') }}">
+   
+</head>
+<body>
+    <br>
+    <div class="container">
+        {% include "messages.html" %}
+       </div>
+<div class="a">
+<ul>
+    {% if session["logged_in"] %}
+    <li><a href="/logout" class="round green">Çıkış Yap<span class="round">Çıkış yapmak için tıklayınız</span></a></li> 
+    
+    {% else %}
+   <li><a href="/login" class="round green">Giriş Yap<span class="round">Eğer bir hesabınız varsa giriş yapınız</span></a></li>
+    {% endif %}
+    
+ 
+   {% if session["logged_admin"] %}
+   <li><a href="/dashboard" class="round yellow">Admin girişi<span class="round">Yönetici Girişi</span></a></li>
+   {% endif %}
+  <li><a href="/register" class="round red">Kayıt Ol<span class="round">Hesabınız yoksa burdan kayıt olabilirsiniz</span></a></li>
+   
+</ul>               
+
+</div>
+<div ><span> Hoş Geldiniz... {{ session["username"] }}</span></div>
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="buttons">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div class="title">Chat</div>
+    </div>
+    <ul id = "scrol-pane" class="messages">
+        <div id ="soru">
+        
+        <p style="color:red; margin-right: 75%;">{{soru}} 
+        
+        </p>
+         </div>
+            <div id ="cevap">
+            
+            <p style="color:blue; margin-left: 75%;">{{cevap}} </p>
+             </div>
+
+    
+     </ul>
+
+    <div class="bottom_wrapper clearfix">
+    <form action = "/ekle" method = "POST">
+        <div class="message_input_wrapper">
+            <input id ="textInput" name = "name" class="message_input" placeholder="Mesajınızı giriniz..." />
+        </div>
+        <div class="send_message">
+           
+            <div class="text"><button  id ="A" class ="dugme">Gönder</button></div>
+        </div>
+        </form>
+    </div>
+</div>
+<div class="message_template">
+    <li class="message">
+        <div class="avatar"></div>
+        <div class="text_wrapper">
+            <div class="text"></div>
+        </div>
+    </li>
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

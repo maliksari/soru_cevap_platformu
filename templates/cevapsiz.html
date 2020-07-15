@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap4.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tasarim.css') }}">
+    
+    <title>Admin Paneli</title>
+</head>
+<body>
+
+    <div class="container">
+        <br><br>
+        <h3>Admin Paneli</h3>
+
+        <small>Hoşgeldin, {{ session["username"] }}</small>
+        <hr>
+        <h2>Cevapsız Sorular</h2>
+        {% if sorular %}
+
+        <table class="table table-hover">
+                <thead>
+                  <tr>
+                  
+                    <th scope="col">id</th>
+                   
+                    <th scope="col">Soru</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for soru in sorular %}
+                    <tr>
+                          <td>{{soru.id}}</td>
+                          <td>{{soru.cevapsiz_soru}}</td>
+                          <td><a href="/cevap_yaz/{{ soru.id }}" class="btn btn-danger">Cevap Yaz</a></td>
+                          
+                        </tr>   
+                    {% endfor %}
+                    
+                  
+                
+                </tbody>
+              </table>
+
+        {% else %}
+        <div class="alert alert-danger">Yeni soru bulunmuyor </div>
+        {% endif %}
+        
+
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
